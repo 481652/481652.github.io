@@ -1,49 +1,162 @@
-<meta charset="UTF-8">
-<html>
-<title>LCS网站</title>      
-<body>
-    <center>
-    <h1>LRB Code Studio</h1>
-    <p>
-    <b>注意：本网站中的“项目与资源”板块将会迁移至子页面。</b><br>
-    LCS网站已经开始内测。由于技术猿HTML能力有限，目前网站只能这么简陋。<br>
-    网站建议电脑/平板使用(暂时不适配手机)<br>
-    By LCS ，基于GitHub Pages搭建<br>
-    很高兴你来到这里!现在网站还没有彻底完善，后续有时间会添加。欢迎一起完善本网站！<br>
-    </p>
-    <p>
-    <b>项目：（更多项目等待添加)</b><br>
-    提醒：由于LCS大部分项目基于.NET Framework,所以在使用前请<a href="https://dotnet.microsoft.com/zh-cn/download/dotnet-framework">下载.NET Framework</a><br>
-    1.qpaj.exe（暂停的项目）<br>
-    欢迎使用qpaj.exe！这是一个在上层显示文本和图片的玩笑程序。<br>
-    一个可用的实例（zxxsb）下载链接：<br>
-    <a href="https://githubfast.com/481652/qpaj">点我GitHub下载</a>
-    <a href="https://lrbcodestudio.lanzoub.com/i5Du818ky06f">点我高速下载</a><br>
-    2.tyvirus（病毒，已停更）<br>
-    3.vb运行库安装（已废弃，最新版本：v3.1)<br>
-    4.LCS资源商店（由于技术性故障被迫取消）<br>
-    5.rpcs(由于技术性故障被迫取消）<br>
-    </p>
-    <p>
-    <b>资源</b>：<br>
-    1.极域杀手：<br>
-    新手：下载资源1 懂电脑：下载资源2或3或4（不好用的旧资源已删除）<br> 
-    <a href="https://lrbcodestudio.lanzoub.com/i9QWi1bpm3mf"> 1.【新手推荐】界面友好，打开即可杀极域高速下载(下载密码:i1tb)</a><br>
-    <a href="https://lrbcodestudio.lanzoub.com/iw1yj1bu0pkd"> 2.【懂电脑强烈推】界面差，但有远控功能，不是一般的强大（下载密码:acsf)</a><br>
-    <a href="https://lrbcodestudio.lanzoub.com/iFUMH1bpmkje"> 3.全能工具包，拥有以上所有资源+远控工具包（无下载密码） </a><br>
-    <a href="https://wwiy.lanzouj.com/iZwTm1c819zc"> 【最新更新】4. 冷麟极域反控制，侧重于反控制，老手无脑下 </a><br>   
-    </p>
-    <p>
-    <b>慢觉测试专栏</b><br>
-    <a href="https://lrbcodestudio.lanzoub.com/b0393v03a">慢觉测试所有资源下载 密码:3lw9 </a><br>
-    </p>
-    <p>_______________________________________________________________________________________________</p>
-    <p>
-    关于：<br>
-    LCSq群：146732405<br>
-    感谢：@Edit_Win8(总编辑）@481652（技术支持）@Fyc2333(社区贡献）<br>
-    </p>
-   </center>
-<body>        
-</html>
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+  <meta charset="UTF-8">  
+  <title>LCS网站</title>  
 
+  <style>  
+    /* 卡片容器样式 */  
+    .card-container {  
+      display: flex;  
+      flex-wrap: wrap;  
+      justify-content: center;  
+    }  
+  
+    /* 卡片样式 */  
+    .card {  
+      width: 300px; /* 卡片宽度 */  
+      margin: 10px;  
+      border: 1px solid #ccc;  
+      border-radius: 5px;  
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);  
+      padding: 15px;  
+      text-align: center;  
+    }  
+  
+    /* 卡片标题样式 */  
+    .card-title {  
+      font-size: 18px;  
+      margin-top: 0;  
+    }  
+  
+    /* 卡片内容样式 */  
+    .card-content {  
+      color: #777;  
+      margin-top: 10px;  
+    }  
+  
+    /* 卡片链接样式 */  
+    .card-link {  
+      display: block;  
+      background-color: #0066cc;  
+      color: #fff;  
+      text-decoration: none;  
+      padding: 10px;  
+      border-radius: 5px;  
+      margin-top: 10px;  
+      transition: background-color 0.3s ease;  
+    }  
+  
+    .card-link:hover {  
+      background-color: #004488;  
+    }  
+    .popup {    
+            display: none; /* 隐藏弹窗 */    
+            position: fixed; /* 固定定位 */    
+            top: 50%; /* 顶部距离页面顶部50% */    
+            left: 50%; /* 左侧距离页面左侧50% */    
+            transform: translate(-50%, -50%); /* 居中定位 */    
+            width: 400px; /* 弹窗宽度 */    
+            height: 200px; /* 弹窗高度 */    
+            background-color: #f1f1f1; /* 背景颜色 */    
+            border: 1px solid #ccc; /* 边框 */    
+            border-radius: 5px; /* 边框圆角 */    
+            padding: 20px; /* 内边距 */    
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* 阴影效果 */    
+        }    
+        /* 添加弹窗内容居中样式 */    
+        .popup-content {    
+            text-align: center; /* 水平居中 */    
+            display: flex; /* 使用flex布局 */    
+            flex-direction: column; /* 垂直方向布局 */    
+            justify-content: center; /* 垂直居中 */    
+        }    
+        /* 添加蓝色按钮样式 */    
+        .blue-button {    
+            display: block;    
+            width: 150px;    
+            height: 50px;    
+            margin: 0 auto; /* 按钮居中 */    
+            background-color: #0066cc; /* 背景色为蓝色 */    
+            color: white; /* 文字颜色为白色 */    
+            border: none; /* 去除边框 */    
+            border-radius: 5px; /* 圆角边框 */    
+            font-size: 18px; /* 字体大小 */    
+            cursor: pointer; /* 鼠标悬停时呈现手型图标 */    
+            text-align: center; /* 文字居中 */    
+            line-height: 50px; /* 使文字垂直居中 */    
+        }    
+  </style>  
+  <!-- 弹窗内容 -->    
+  <div id="popup" class="popup">    
+    <div class="popup-content">    
+        <h2>公告</h2>    
+        <p>欢迎来到LCS网站！网站全新改版，布局更合理！<br> 如果您有任何宝贵意见，请加入LCSqq群！</p>    
+        <button onclick="closePopup()" class="blue-button">好</button>    
+    </div>    
+</div>  
+<!-- 页面内容 --> 
+ <center>  
+  <h1>欢迎来到LCS网站!</h1>
+ </center>
+</head>  
+<body> 
+   
+  <div class="card-container">  
+    <!-- 项目卡片 -->  
+    <div class="card">  
+      <h3 class="card-title">项目：qpaj.exe</h3>  
+      <p class="card-content">一个在上层显示文本和图片的玩笑程序。</p>  
+      <a href="https://githubfast.com/481652/qpaj" class="card-link">点我GitHub下载</a>  
+      <a href="https://lrbcodestudio.lanzoub.com/i5Du818ky06f" class="card-link">点我高速下载</a>  
+    </div>  
+    <div class="card-container">  
+    <!-- 废弃的项目卡片 -->  
+    <div class="card">  
+      <h3 class="card-title">早期（已废弃）项目</h3>  
+      <p class="card-content">1.tyvirus<br> 2.vb运行库安装<br> 3.rpcs与LCS应用商城</p>    
+    </div>  
+    <!--即将到来的项目卡片 -->  
+    <div class="card">  
+      <h3 class="card-title">即将到来的项目</h3>  
+      <p class="card-content">希沃白板杀手</p>    
+    </div>  
+  <!-- 其他资源卡片 -->    
+ <div class="card-container">  
+  <div class="card">
+  <h3 class="card-title">资源：极域杀手</h3>
+  <p class="card-content">新手：下载资源1 懂电脑：下载资源2或3或4（不好用的旧资源已删除）</p>
+  <a href="https://lrbcodestudio.lanzoub.com/i4c6w1fvfsri" class="card-link">1.【最新版本，新手推荐】界面友好，打开即可杀极域，点我高速下载(下载密码:fwip)</a>
+  <a href="https://lrbcodestudio.lanzoub.com/iw1yj1bu0pkd" class="card-link">2.【懂电脑强烈推】界面差，但有远控功能，不是一般的强大（下载密码:acsf)</a>
+  <a href="https://lrbcodestudio.lanzoub.com/iFUMH1bpmkje" class="card-link">3.全能工具包，拥有以上所有资源+远控工具包（无下载密码）</a>
+  <a href="https://wwiy.lanzouj.com/iZwTm1c819zc" class="card-link">【最新更新】4. 冷麟极域反控制，侧重于反控制，老手无脑下</a>
+ </div>
+  <!-- 其他资源卡片 -->
+ <div class="card-container">
+  <div class="card">
+ <h3 class="card-title">资源：慢觉测试专栏</h3>
+ <p class="card-content">慢觉测试所有资源下载 密码:3lw9</p>
+ <a href="https://lrbcodestudio.lanzoub.com/b0393v03a" class="card-link">下载链接</a>
+ </div>
+ <div class="card-container">
+  <div class="card">
+ <h3 class="card-title">关于：</h3>
+ <p class="card-content">LCSq群：146732405<br>感谢：@Edit_Win8(总编辑）@481652（技术支持）@Fyc2333(社区贡献）<br> 本网站基于GitHub Pages免费搭建<br>By LCS 2020-2023</p>
+ <a href="https://githubfast.com/481652" class="card-link">站长GitHub</a>
+ <a href="https://1drv.ms/o/s!Amy6bIyqFuiJtREX8t_oloDKe7Nl?e=TWhHd5" class="card-link">LCS在线计算机学习笔记（需科学上网后访问）</a>
+  </div>
+</div>
+<!-- JavaScript代码 -->    
+<script>    
+  window.onload = function() {    
+      // 页面加载完成后显示弹窗    
+      var popup = document.getElementById('popup');    
+      popup.style.display = 'block'; // 显示弹窗    
+  };     
+  // 添加关闭弹窗函数  
+  function closePopup() {  
+      var popup = document.getElementById('popup');  
+      popup.style.display = 'none'; // 隐藏弹窗  
+  }     
+</script>    
+</body>
