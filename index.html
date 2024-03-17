@@ -85,7 +85,18 @@
             cursor: pointer; /* 鼠标悬停时呈现手型图标 */    
             text-align: center; /* 文字居中 */    
             line-height: 50px; /* 使文字垂直居中 */    
-        }    
+        }   
+.container {  
+  display: flex;  
+  flex-wrap: wrap; /* 允许卡片换行 */  
+  justify-content: space-between; /* 水平对齐方式 */  
+  align-items: stretch; /* 垂直对齐方式 */  
+}  
+  
+.card {  
+  flex: 0 0 auto; /* 不放大、不缩小，基于内容大小 */  
+  margin-bottom: 20px; /* 设置卡片间的间距 */  
+}
   </style>  
   <!-- 弹窗内容 -->    
   <div id="popup" class="popup">    
