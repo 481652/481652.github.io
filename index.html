@@ -23,13 +23,7 @@
     height: 60px; /* footer的高度,确保这与.wrapper的padding-bottom和::after的height匹配 */  
     }  
   
-  footer {  
-    position: absolute;  
-    bottom: 0;  
-    width: 100%;  
-    height: 60px; /* footer的高度 */  
-    flex: 0 0 auto;
-    }
+  
     /* 卡片容器样式 */  
     .card-container {  
       display: flex;  
@@ -116,10 +110,18 @@
           display: block;  
           text-align: center;   
           margin: 0px auto;  
-          position: absolute;  
-          bottom: 100px;  
+          position: absolute;   
           width: 100%;  
-          min-width: 610px; /* 保证文字inline-block效果时不换行 */
+          min-width: 610px; /* 保证文字inline-block效果时不换行 */ 
+          bottom: 0;    
+          height: 60px; /* footer的高度 */  
+          flex: 0 0 auto;
+          background: rgb(252, 252, 252);
+          height: 40px;
+          border: 1px solid #ccc;
+          border-radius: 5px;  
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    
        }  
 
   </style>  
